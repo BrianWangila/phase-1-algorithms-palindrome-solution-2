@@ -10,6 +10,28 @@ function isPalindrome(word) {
   }
 }
 
+//second method
+
+function isPalindrome2(string){
+  let len = string.length;
+  // let half = Math.floor(len)
+  let start = string.substring(0, Math.floor(len/2)).toLowerCase()
+
+  let end = string.substring(len - Math.floor(len/2)).toLowerCase()
+  let flip = end.split("").reverse().join("")
+
+  if(start === flip){
+    return true
+  } else
+  return false
+
+}
+console.log(isPalindrome2("redivider"))
+console.log(isPalindrome2("madam"))
+console.log(isPalindrome2("window"))
+console.log(isPalindrome2("deed"))
+
+
 /* 
   Add your pseudocode here
   Input: a string
